@@ -2,7 +2,7 @@
 
 Natujenge is a Fitness Tracker Application that allows users to log their workouts, track fitness progress, and view exercise details.
 
-## log Workouts
+## Log Workouts
 Allow users to log their workouts, including exercises, sets, reps, and weights.
 Provide input fields for users to enter the details of their workouts.
 Save each workout entry with a timestamp for tracking purposes.
