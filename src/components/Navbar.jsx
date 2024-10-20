@@ -1,25 +1,46 @@
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/images/logo.svg';
+import WorkoutLog from './WorkoutLog';
+import ProgressChart from './ProgressChart';
+import Train from './Train';
+
 const Navbar = () => {
+    const linkClass = ({ isActive }) =>
+        isActive
+          ? 'bg-black text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+          : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2';
   return (
-   <>
-    <nav>
-        <h1>Workouts</h1>
-        <h1>Meals</h1>
-        <h1>Workouts</h1>
-        <h1>Workouts</h1>
-        <button>Login</button>
-        <p>Motion is Lotion. Apply it daily!!!</p>
-        Fun, varied workouts
-        Healthy & personalised meals
-        Sleep meditation
-        Whole-body health
-        <button>Natujenge</button>
-    
-        {/* <!-- Trainers -->
-        <!-- Routines-->
-        <!-- Meals--> */}
-        
-    </nav>
-   </>
+    <nav className='bg-indigo-700 border-b border-indigo-500'>
+    <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
+      <div className='flex h-20 items-center justify-between'>
+        <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
+          <NavLink className='flex flex-shrink-0 items-center mr-4' to='/'>
+            <img className='h-10 w-auto' src={logo} alt='Gymnast Logo' />
+            <span className='hidden md:block text-white text-2xl font-bold ml-2'>
+              Natujenge
+            </span>
+          </NavLink>
+          <div className='md:ml-auto'>
+            <div className='flex space-x-2'>
+              <NavLink to='/workouts' className={linkClass}>
+               WorkoutLog
+              </NavLink>
+              <NavLink to='/track-fitness' className={linkClass}>
+                ProgressChart
+              </NavLink>
+              <NavLink to='/exercise' className={linkClass}>
+                Train
+              </NavLink>
+              <NavLink to='/add-job' className={linkClass}>
+                SignOut
+              </NavLink>
+            <h2 className='md:ml-auto'>Welcome back UserName</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
   );
 }
 

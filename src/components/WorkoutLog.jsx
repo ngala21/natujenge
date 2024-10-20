@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState} from 'react'
+import { Link } from 'react-router-dom'
 
 const WorkoutLog = () => {
   return (
-    <div>WorkoutLog</div>
+    <div>My Workouts</div>
   )
 }
 

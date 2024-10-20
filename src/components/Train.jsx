@@ -1,10 +1,12 @@
 import React, { useState} from 'react'
 import { Link } from 'react-router-dom'
 
-const ProgressChart = () => {
+const Train = () => {
   return (
-    <div>My Progress</div>
+    <div>
+      <h2>Jenga Muscle</h2>
+    </div>
   )
 }
 
-export default ProgressChart
+export default Train
