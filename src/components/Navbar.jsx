@@ -31,9 +31,6 @@ const Navbar = () => {
               <NavLink to='/exercise' className={linkClass}>
                 Train
               </NavLink>
-              <NavLink to='/add-job' className={linkClass}>
-                SignOut
-              </NavLink>
             <h2 className='md:ml-auto'>Welcome back UserName</h2>
             </div>
           </div>
