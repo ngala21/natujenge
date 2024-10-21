@@ -7,7 +7,7 @@ const Train = () => {
     <>
     <Navbar />
     <div>
-      <h2>Jenga Muscle</h2>
+    <h2 className="text-5xl text-center text-indigo-700 pt-20 pb-20">Jenga Muscle</h2>
     </div>
     </>
   )

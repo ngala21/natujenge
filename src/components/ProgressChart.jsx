@@ -6,7 +6,9 @@ const ProgressChart = () => {
   return (
     <>
     <Navbar />
-    <div>My Progress</div>
+    <div>
+    <h2 className="text-5xl text-center text-indigo-700 pt-20 pb-20">My Progress</h2>
+    </div>
     </>
   )
 }
