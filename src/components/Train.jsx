@@ -4,22 +4,26 @@ import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import bazenga from '../assets/images/bazenga.svg'
 
-const url = 'https://wger.de/api/v2/workoutss'
+const baseURL = 'https://wger.de/api/v2/';
+const yourAPIKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NzA3NjQ0LCJpYXQiOjE3Mjk3MDcwNDQsImp0aSI6ImQ2Y2MyZmRlOWU3OTQ1ZmI5MThhYzIxYjUwMmQxNWUyIiwidXNlcl9pZCI6MjA3OTQ4fQ.6Sn4ZQq1yI0Jza0D_rYWWpUzy3TsFP_RAalNIBT74BE'
 
 const Train = () => {
 
-  const fetchExercises = async () => {
-    try {
-      const resp = await axios.get(url, {
-        headers: {
-          Accept: 'application/json'
-        },
-      });
-      console.log(resp.data)
-    } catch (err) {
-      setError('Failed to fetch workout. Please try again');
-    }  
-  }
+  const headers = {
+    Authorization: `Token ${yourAPIKey}`
+  };
+
+  axios.get(`${baseURL}workouts/`, { headers })
+  .then(response => {
+    // Handle the response data
+    const workouts = response.data;
+    console.log(workouts);
+  })
+  .catch(error => {
+    // Handle errors
+    console.error(error);
+  });
+
   return (
     <>
     <Navbar />

@@ -1,8 +1,24 @@
 import React, { useState} from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 
 const WorkoutLog = () => {
+  const headers = {
+    Authorization: `Token ${yourAPIKey}`
+  };
+
+  axios.get(`${baseURL}workouts/`, { headers })
+  .then(response => {
+    // Handle the response data
+    const workouts = response.data;
+    console.log(workouts);
+  })
+  .catch(error => {
+    // Handle errors
+    console.error(error);
+  });
+  
   return (
     <>
     <Navbar />
