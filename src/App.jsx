@@ -4,7 +4,7 @@ import HomePage from './components/HomePage';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Member from './components/Member';
-import WorkoutLog from './components/WorkoutLog';
+import Workout from './components/Workout';
 import ProgressChart from './components/ProgressChart';
 import Train from './components/Train';
 
@@ -18,7 +18,7 @@ const App = () => {
             <Route path="/register" element={<SignUp />} />
             <Route path="/login" element={<SignIn />} />
             <Route path="/start" element={<Member />} />
-            <Route path="/workouts" element={<WorkoutLog />} />
+            <Route path="/workouts" element={<Workout />} />
             <Route path="/track-fitness" element={<ProgressChart />} />
             <Route path="/exercise" element={<Train />} />
           </Routes>

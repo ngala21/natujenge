@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import bazenga from '../assets/images/bazenga.svg'
 
 const baseURL = 'https://wger.de/api/v2/';
-const yourAPIKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NzA3NjQ0LCJpYXQiOjE3Mjk3MDcwNDQsImp0aSI6ImQ2Y2MyZmRlOWU3OTQ1ZmI5MThhYzIxYjUwMmQxNWUyIiwidXNlcl9pZCI6MjA3OTQ4fQ.6Sn4ZQq1yI0Jza0D_rYWWpUzy3TsFP_RAalNIBT74BE'
+const yourAPIKey = '1497635e35a86e58878c2612bbc2c00c4656ea4f'
 
 const Train = () => {
 
@@ -13,7 +13,7 @@ const Train = () => {
     Authorization: `Token ${yourAPIKey}`
   };
 
-  axios.get(`${baseURL}workouts/`, { headers })
+  axios.get(`${baseURL}workout/`, { headers })
   .then(response => {
     // Handle the response data
     const workouts = response.data;
@@ -27,13 +27,10 @@ const Train = () => {
   return (
     <>
     <Navbar />
-    <section className='text-center'>
-      <div className='flex  items-center'>
-        <h2 className="text-5xl text-center text-indigo-700 pt-20 pb-20" >
-          Jenga Muscle
-            <img className='h-6 w-6 ml-2' src={bazenga} alt="" />
-          
-          </h2>
+    <section>
+      <div className='flex items-center'>
+        <h2 className="text-5xl text-center text-indigo-700 pt-20 pb-20" >Jenga Muscle</h2>
+          <img className='h-9 w-8 ml-2' src={bazenga} alt="" />
       </div>
     </section>
     </>

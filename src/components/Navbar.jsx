@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
-import WorkoutLog from './WorkoutLog';
+import WorkoutLog from './Workout';
 import ProgressChart from './ProgressChart';
 import Train from './Train';
 
