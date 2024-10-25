@@ -26,17 +26,17 @@ const Workout = () => {
   });
 
   const handleSearchClick = async () => {
-    await fetchQuestions();
-    handleSearch(questions);
+    await fetchWorkouts();
+    handleSearch(workouts);
   };
 
   const handleSearch = () => {
-    const filtered = questions.filter((question) =>
-      question.question.toLowerCase().includes(searchQuery.toLowerCase())
+    const filtered = workouts.filter((workout) =>
+      workout.workout.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    setFilteredQuestions(filtered);
+    setFilteredWorkouts(filtered);
     if (filtered.length === 0) {
-      setErrorMessage('No questions match your search query.');
+      setErrorMessage('No workouts match your search query.');
     } else {
       setErrorMessage('');
     }
@@ -65,14 +65,7 @@ const Workout = () => {
           </button>
         </div>
       <section>
-      {/* <ul>
-      {data.map((item, index) => (
-        <li key={item.id}> */}
-          {/* Render the list item content using item properties */}
-          {/* {item.name}
-        </li> */}
-      {/* ))} */}
-    {/* </ul> */}
+        
       </section>
     </div>
     </>
