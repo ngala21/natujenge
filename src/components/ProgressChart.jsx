@@ -7,6 +7,8 @@ const baseURL = 'https://wger.de/api/v2/';
 const yourAPIKey = '1497635e35a86e58878c2612bbc2c00c4656ea4f'
 
 const ProgressChart = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
   const headers = {
     Authorization: `Token ${yourAPIKey}`
   };
@@ -21,6 +23,23 @@ const ProgressChart = () => {
     // Handle errors
     console.error(error);
   });
+
+  const handleSearchClick = async () => {
+    await fetchWorkouts();
+    handleSearch(workouts);
+  };
+
+  const handleSearch = () => {
+    const filtered = workouts.filter((workout) =>
+      workout.workout.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredWorkouts(filtered);
+    if (filtered.length === 0) {
+      setErrorMessage('No workouts match your search query.');
+    } else {
+      setErrorMessage('');
+    }
+  };
 
   return (
     <>
