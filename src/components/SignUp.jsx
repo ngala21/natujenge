@@ -55,7 +55,7 @@ function SignUp() {
               className="w-full border border-gray-300 p-2 rounded"
             />
           </div>
-          <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded">
+          <button type="submit" className="w-full bg-blue-500 hover:bg-slate-700 text-white py-2 rounded">
             Register
           </button>
         </form>

@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
 
 function SignIn () {
-     // State variables to manage user input (email, password), login status, and 'remember me' checkbox
+  // State variables to manage user input (email, password), login status, and 'remember me' checkbox
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -84,9 +84,11 @@ return (
               Remember me!
             </label>
           </div>
-          <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded">
+          <p>Forgot your PIN? Reset PIN</p>
+          <button type="submit" className="w-full bg-blue-500 hover:bg-slate-700 text-white py-2 rounded ">
             Login
           </button>
+          <p>Don't have an Account? Sign Up</p>
         </form>
       </div>
     </div>

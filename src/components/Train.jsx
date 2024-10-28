@@ -17,7 +17,7 @@ const Train = () => {
     const fetchWorkouts = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('`${baseURL}exercise/', {
+        const response = await axios.get('`${baseURL}exercise-base/', {
           params: {
             language: 'en',
             format: 'json',

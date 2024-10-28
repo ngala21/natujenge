@@ -46,7 +46,7 @@ const Workout = () => {
     <>
     <Navbar />
     <div>
-      <h2 className="text-5xl text-center text-indigo-700 pt-20 pb-20">My Workouts</h2>
+      <h2 className="text-5xl text-center text-indigo-700 decoration-red-500 pt-20 pb-20">My Workouts</h2>
 
       <div className="flex items-center border border-gray-300 rounded w-full max-w-md mb-4">
           <input

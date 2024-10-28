@@ -45,7 +45,7 @@ const ProgressChart = () => {
     <>
     <Navbar />
     <div>
-    <h2 className="text-5xl text-center text-indigo-700 pt-20 pb-20">My Progress</h2>
+      <h2 className="text-5xl text-center text-indigo-700 underline decoration-red-800 underline-offset-8 pt-20 pb-20">My Progress</h2>
     </div>
     </>
   )
